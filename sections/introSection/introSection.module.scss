@@ -1,0 +1,83 @@
+@import '@/styles/variables';
+@import '@/styles/utils';
+
+.intro{
+    width:100%;
+    position:relative;
+    height:100vh;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-color:rgba(164, 165, 165, 0.445);
+    top:0;
+    margin:0;
+    padding:0;
+    z-index:2;
+    display:flex;
+    display:flex;
+    align-items:space-between;
+    &_box{
+        position:absolute;
+        content:'';
+        top:0;
+        left:0;
+        background-size:cover;
+        background-position:center;
+        background-repeat:no-repeat;
+        background-image:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('https://res.cloudinary.com/dqzhuopqp/image/upload/v1645365083/samples/JuliaMain_scelkx.jpg');
+        width:100%;
+        height:100%;
+        z-index:1;
+    }
+    &__main{
+        display:flex;
+        flex-direction: column;
+        align-self: flex-end;
+        margin-bottom:2.5rem;
+        z-index: 5;
+    }
+    &__info{
+        @extend %page-padding;
+        display:flex;
+        justify-content:space-between;
+        z-index:inherit;
+        margin-right:1rem;
+        margin-right:1rem;
+        margin-top:1rem;
+        @media(max-width:860px){
+            display:block;
+            margin-right:0.55rem;
+        }
+    }
+    &__txt{
+        @media(max-width:860px){
+            display:none;
+        }
+    }
+
+    // &__background{
+    //     width: inherit;
+    //     height:inherit;
+    //     margin:0;
+
+    //     &_image{
+    //         position:sticky;
+    //         width:100%;
+    //         height:100%;
+    //         top:0;
+    //         left:0;
+    //         width:inherit;
+    //         height:inherit;
+    //         object-fit: cover;
+    //         object-position: center;
+    //         z-index:-1;
+    //     }
+    //     // &_overlay{
+    //     //     width:100%;
+    //     //     height:100%;
+    //     //     position:absolute;
+    //     //     background:red;
+
+    //     // }
+    // }
+}

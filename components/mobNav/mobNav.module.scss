@@ -1,0 +1,66 @@
+
+@import '@/styles/variables';
+@import '@/styles/utils';
+
+.mobnav{
+    position:fixed;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    background:#fff;
+    z-index:10;
+   
+    @extend %page-padding;
+    
+    
+
+    &__main{
+        background:inherit;
+        padding-top:1rem;
+        padding-bottom:1rem;
+        width:100%;
+        height:100vh;
+        overflow-y:scroll;
+        overflow-x:hidden;
+        &::-webkit-scrollbar {
+            width: 0px;
+        }
+    }
+    &__close, &__credit{
+        display:flex;
+        padding:.9rem 1rem;
+        justify-content:space-between;
+        border:1px solid $col-dark-200;
+        border-radius:10px;
+        font-size:.95rem;
+        cursor:pointer;
+    }
+    &__credit{
+        margin-top:1rem;
+        display:block;
+        text-align: center;
+    }
+    &__links{
+        list-style:none;
+        margin:0;
+        padding:0;
+    }
+    &__link{
+        margin:0;
+        padding:0;
+        font-weight:500;
+        font-size:2rem;
+        margin-top:1rem;
+        padding-bottom:1rem;
+        border-bottom:1px solid $col-dark-200;
+    }
+    &__link_small{
+        font-size:.9rem;
+        padding-bottom:.7rem;
+        margin-top:.7rem;
+        border-bottom:none;
+    }
+    &__link:last-child{
+        border-bottom:1px solid $col-dark-200;
+    }
+}

@@ -1,0 +1,146 @@
+@import '@/styles/variables';
+@import '@/styles/utils';
+
+
+.swiper{
+    width:450px;
+    height:500px;
+    display:grid;
+    grid-template-rows:1fr 70px;
+    z-index:9;
+    margin-top:1rem;
+    @media (max-width: 1204px){
+       margin:auto;
+       margin-top:3rem;
+    }
+    @media (max-width: 700px){
+        
+    }
+    @media (max-width: 500px){
+        height:550px;
+        width:100%;
+        grid-template-rows:1fr 150px;
+        // background:red;
+    }
+     &__pick{
+         width:100%;
+         height:100%;
+        //  background:red;
+         border-radius: 10px;
+         position:relative;
+         padding:1.8rem;
+         display:flex;
+         justify-content:space-between;
+         flex-direction:column;
+         background-size:100%;
+         background-position:center;
+         background-repeat:no-repeat;
+         @media (max-width: 500px){
+          padding:1rem;
+          padding-bottom:1.8rem;
+          padding-top:1.3rem;
+        }
+        &_static{
+            position:absolute;
+            width:100%;
+            height:100%;
+            top:0;
+            left:0;
+            background-image:url('https://res.cloudinary.com/dqzhuopqp/image/upload/v1645545433/samples/QmQFwLNhKKJK6uS3msto6aLMEceqB2N4vRoENhzP7aMZXM_xaqdsj.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius:10px;
+        }
+         &::after{
+             content:'';
+             top:0;
+             left:0;
+             position:absolute;
+             width:100%;
+             height:100%;
+             z-index:-1;
+             background-image:linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('https://res.cloudinary.com/dqzhuopqp/image/upload/v1645545433/samples/QmQFwLNhKKJK6uS3msto6aLMEceqB2N4vRoENhzP7aMZXM_xaqdsj.jpg');
+             background-size: cover;
+             background-repeat: no-repeat;
+             background-position: center;
+             border-radius:10px;
+             //opacity: .5;
+             
+         }
+         &_info{
+            // background:teal;
+            width:fit-content;
+            z-index:2;
+            h2{
+               color:#fff;
+               font-family:inherit;
+               margin-top:1rem;
+               font-size:2rem;
+               font-weight:500;
+            }
+            p{
+                color:$shadow-light;
+                font-size:.9rem;
+                font-weight:500;
+
+            }
+        }
+         &_links{
+             display:flex;
+             position:relative;
+             z-index:0;
+            svg{
+                position:absolute;
+                left:115.7px;
+                top:-4.8px;
+                transition:.2s;
+                // -4.7px;
+                //55.7px;
+                //115.7px;
+            }
+         }
+         &_link{
+             width:50px;
+             height:50px;
+             border-radius:10px;
+             object-fit: cover;
+             object-position: center;
+             margin-right:10px;
+         }
+         &_tag{
+             background:$col-dark-900;
+             height:fit-content;
+             padding:.6rem 1.2rem;
+             padding-bottom:.7rem;
+             color:#fff;
+             border-radius:30px;
+             font-size:.9rem;
+             width:fit-content;
+             z-index:1;
+         }
+     }
+    &__btns{
+        display:flex;
+        justify-content:space-between;
+        margin-top:1rem;
+        @media (max-width: 500px){
+            display:block;
+        }
+    }
+
+}
+
+.bg-anime{
+
+    animation: ngAnime .3s ease-out 1;
+    transform-origin: bottom left;
+    @keyframes ngAnime {
+       from {
+           transform:scale(0.3);
+       } 
+       to{
+           transform:scale(1);
+       }
+    }
+}
